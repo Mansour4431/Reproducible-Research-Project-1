@@ -1,0 +1,475 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Reproducible Research: Project\_1},
+  pdfauthor={Mansour\_haghi},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Reproducible Research: Project\_1}
+\author{Mansour\_haghi}
+\date{2022-12-31}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+It is now possible to collect a large amount of data about personal
+movement using activity monitoring devices such as a
+\href{https://www.fitbit.com/home}{Fitbit},
+\href{https://www.nike.com/us/en_us/c/nikeplus-fuelband}{Nike Fuelband},
+or \href{https://jawbone.com/up}{Jawbone Up}. These type of devices are
+part of the ``quantified self'' movement -- a group of enthusiasts who
+take measurements about themselves regularly to improve their health, to
+find patterns in their behavior, or because they are tech geeks. But
+these data remain under-utilized both because the raw data are hard to
+obtain and there is a lack of statistical methods and software for
+processing and interpreting the data.
+
+This assignment makes use of data from a personal activity monitoring
+device. This device collects data at 5 minute intervals through out the
+day. The data consists of two months of data from an anonymous
+individual collected during the months of October and November, 2012 and
+include the number of steps taken in 5 minute intervals each day.
+
+The data for this assignment can be downloaded from the course web site:
+
+The variables included in this dataset are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{steps}: Number of steps taking in a 5-minute interval (missing
+  values are coded as \emph{NA})
+\item
+  \textbf{date}: The date on which the measurement was taken in
+  YYYY-MM-DD format
+\item
+  \textbf{interval}: Identifier for the 5-minute interval in which
+  measurement was taken The dataset is stored in a comma-separated-value
+  (CSV) file and there are a total of 17,568 observations in this
+  dataset.
+\end{itemize}
+
+\hypertarget{required-packages}{%
+\subsection{required packages}\label{required-packages}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Loading packages}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(ggthemes)}
+\FunctionTok{library}\NormalTok{(scales)}
+\FunctionTok{library}\NormalTok{(lubridate)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{loading-and-preprocessing-the-data}{%
+\subsection{Loading and preprocessing the
+data}\label{loading-and-preprocessing-the-data}}
+
+Downloading and unzipping data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{path }\OtherTok{=} \FunctionTok{getwd}\NormalTok{()}
+\FunctionTok{unzip}\NormalTok{(}\StringTok{"repdata\_data\_activity.zip"}\NormalTok{, }\AttributeTok{exdir =}\NormalTok{ path)}
+\end{Highlighting}
+\end{Shaded}
+
+Reading csv and summary.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"activity.csv"}\NormalTok{)}
+
+\NormalTok{activity}\SpecialCharTok{$}\NormalTok{date }\OtherTok{\textless{}{-}} \FunctionTok{as.POSIXct}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{date, }\StringTok{"\%Y\%m\%d"}\NormalTok{)}
+
+\NormalTok{day }\OtherTok{\textless{}{-}} \FunctionTok{weekdays}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{date)}
+
+\NormalTok{activity }\OtherTok{\textless{}{-}} \FunctionTok{cbind}\NormalTok{(activity, day)}
+
+\FunctionTok{summary}\NormalTok{(activity)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      steps             date               interval          day           
+##  Min.   :  0.00   Min.   :2012-10-01   Min.   :   0.0   Length:17568      
+##  1st Qu.:  0.00   1st Qu.:2012-10-16   1st Qu.: 588.8   Class :character  
+##  Median :  0.00   Median :2012-10-31   Median :1177.5   Mode  :character  
+##  Mean   : 37.38   Mean   :2012-10-31   Mean   :1177.5                     
+##  3rd Qu.: 12.00   3rd Qu.:2012-11-15   3rd Qu.:1766.2                     
+##  Max.   :806.00   Max.   :2012-11-30   Max.   :2355.0                     
+##  NA's   :2304
+\end{verbatim}
+
+\hypertarget{what-is-mean-total-number-of-steps-taken-per-day}{%
+\subsection{What is mean total number of steps taken per
+day?}\label{what-is-mean-total-number-of-steps-taken-per-day}}
+
+\hypertarget{calculating-total-steps-taken-on-a-day-_-changing-col-_converting-the-data-set-into-a-data-frame-to-be-able-to-use-ggplot2-names_plotting-a-histogram-using-ggplot2}{%
+\subsection{Calculating total steps taken on a day \_ Changing col
+\_Converting the data set into a data frame to be able to use ggplot2
+names\_Plotting a histogram using
+ggplot2}\label{calculating-total-steps-taken-on-a-day-_-changing-col-_converting-the-data-set-into-a-data-frame-to-be-able-to-use-ggplot2-names_plotting-a-histogram-using-ggplot2}}
+
+\hypertarget{creating-a-histogram-of-the-total-number-of-steps-taken-each-day.}{%
+\subsubsection{Creating a Histogram of the total number of steps taken
+each
+day.}\label{creating-a-histogram-of-the-total-number-of-steps-taken-each-day.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity\_T\_Steps }\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(activity, }\FunctionTok{aggregate}\NormalTok{(steps, }\AttributeTok{by =} \FunctionTok{list}\NormalTok{(date), sum, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\FunctionTok{names}\NormalTok{(activity\_T\_Steps) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Date"}\NormalTok{, }\StringTok{"Steps"}\NormalTok{)}
+
+\NormalTok{total\_Steps\_d }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(activity\_T\_Steps)}
+
+\NormalTok{plot1 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(total\_Steps\_d, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Steps)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{25000}\NormalTok{, }\AttributeTok{by =} \DecValTok{2500}\NormalTok{), }\AttributeTok{fill =} \StringTok{"\#f383ff"}\NormalTok{, }\AttributeTok{col =} \StringTok{"red"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ylim}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{30}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Total Steps Taken Per Day"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Frequency"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Total Number of Steps Taken on a Day"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme\_classic}\NormalTok{(}\AttributeTok{base\_family =} \StringTok{"serif"}\NormalTok{)}
+
+\FunctionTok{print}\NormalTok{(plot1)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{figures unnamed-chunk-4-1.png}
+
+\hypertarget{the-mean-and-median-of-steps-taken-per-day}{%
+\subsection{The mean and median of steps taken per
+day}\label{the-mean-and-median-of-steps-taken-per-day}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(activity\_T\_Steps}\SpecialCharTok{$}\NormalTok{Steps, }\AttributeTok{na.rm =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9354.23
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{median}\NormalTok{(activity\_T\_Steps}\SpecialCharTok{$}\NormalTok{Steps, }\AttributeTok{na.rm =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10395
+\end{verbatim}
+
+\hypertarget{what-is-the-average-daily-activity-pattern}{%
+\subsection{What is the average daily activity
+pattern?}\label{what-is-the-average-daily-activity-pattern}}
+
+Calculating the average steps taken for each 5-minute interval. \#\#
+Time Series plot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{av\_Daily\_Activity }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{steps, }\AttributeTok{by =} \FunctionTok{list}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{interval), }\AttributeTok{FUN =}\NormalTok{ mean, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Changing col names and Converting the data set into a dataframe.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(av\_Daily\_Activity) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Interval"}\NormalTok{, }\StringTok{"Mean"}\NormalTok{)}
+
+\NormalTok{av\_Activity\_d }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(av\_Daily\_Activity)}
+\end{Highlighting}
+\end{Shaded}
+
+we have the valid date-time format we can have a cleaner looking
+time-series plot, for the average 24-hour period.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plot2 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(av\_Activity\_d, }\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(Interval, Mean)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_line}\NormalTok{(}\AttributeTok{col =} \StringTok{"green"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Interval"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Average Number of Steps"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Average Number of Steps Per Interval"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_dark}\NormalTok{(}\AttributeTok{base\_family =} \StringTok{"serif"}\NormalTok{)}
+  
+\FunctionTok{print}\NormalTok{(plot2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{figures unnamed-chunk-8-1.png}
+
+\hypertarget{which-5-minute-interval-on-average-across-all-the-days-in-the-dataset-contains-the-maximum-number-of-steps}{%
+\subsection{Which 5-minute interval, on average across all the days in
+the dataset, contains the maximum number of
+steps?}\label{which-5-minute-interval-on-average-across-all-the-days-in-the-dataset-contains-the-maximum-number-of-steps}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{av\_Daily\_Activity[}\FunctionTok{which.max}\NormalTok{(av\_Daily\_Activity}\SpecialCharTok{$}\NormalTok{Mean), ]}\SpecialCharTok{$}\NormalTok{Interval}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 835
+\end{verbatim}
+
+\hypertarget{imputing-missing-data}{%
+\subsection{Imputing missing data}\label{imputing-missing-data}}
+
+The total amount of NA's and the percentage of missing step data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sum}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{steps))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2304
+\end{verbatim}
+
+Matching the mean of daily activity with the missing values
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Imputed\_Steps }\OtherTok{\textless{}{-}}\NormalTok{av\_Daily\_Activity}\SpecialCharTok{$}\NormalTok{Mean[}\FunctionTok{match}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{interval, av\_Daily\_Activity}\SpecialCharTok{$}\NormalTok{Interval)]}
+\end{Highlighting}
+\end{Shaded}
+
+Transforming steps in activity if they were missing values with the
+filled values from above. Forming the new dataset with the imputed
+missing values. Changing col names
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity\_Imputed }\OtherTok{\textless{}{-}} \FunctionTok{transform}\NormalTok{(activity, }
+                             \AttributeTok{steps =} \FunctionTok{ifelse}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{steps), }\AttributeTok{yes =}\NormalTok{ Imputed\_Steps, }\AttributeTok{no =}\NormalTok{ activity}\SpecialCharTok{$}\NormalTok{steps))}
+
+
+\NormalTok{totalactivity\_Imputed }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ date, activity\_Imputed, sum)}
+
+
+\FunctionTok{names}\NormalTok{(totalactivity\_Imputed) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"date"}\NormalTok{, }\StringTok{"dailySteps"}\NormalTok{)}
+
+\FunctionTok{sum}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(totalactivity\_Imputed}\SpecialCharTok{$}\NormalTok{dailySteps))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+
+\hypertarget{histogram-of-the-total-number-of-steps-taken-each-day-after-missing-values-were-imputed}{%
+\subsection{Histogram of the total number of steps taken each day after
+missing values were
+imputed}\label{histogram-of-the-total-number-of-steps-taken-each-day-after-missing-values-were-imputed}}
+
+\hypertarget{converting-the-data-set-into-a-data-frame-to-be-able-to-use-ggplot2}{%
+\subsection{Converting the data set into a data frame to be able to use
+ggplot2}\label{converting-the-data-set-into-a-data-frame-to-be-able-to-use-ggplot2}}
+
+\hypertarget{plotting-a-histogram-using-ggplot2}{%
+\subsection{Plotting a histogram using
+ggplot2}\label{plotting-a-histogram-using-ggplot2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{totalImputed\_Stepsdf }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(totalactivity\_Imputed)}
+
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(totalImputed\_Stepsdf, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ dailySteps)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{25000}\NormalTok{, }\AttributeTok{by =} \DecValTok{2500}\NormalTok{), }\AttributeTok{fill =} \StringTok{"\#f383ff"}\NormalTok{, }\AttributeTok{col =} \StringTok{"black"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ylim}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{30}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Total Steps Taken Per Day"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Frequency"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Total Number of Steps Taken on a Day"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme\_classic}\NormalTok{(}\AttributeTok{base\_family =} \StringTok{"serif"}\NormalTok{)}
+
+\FunctionTok{print}\NormalTok{(p)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{figures unnamed-chunk-13-1.png} The mean of the total
+number of steps taken per day is:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(totalactivity\_Imputed}\SpecialCharTok{$}\NormalTok{dailySteps)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10766.19
+\end{verbatim}
+
+The median of the total number of steps taken per day is:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{median}\NormalTok{(totalactivity\_Imputed}\SpecialCharTok{$}\NormalTok{dailySteps)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10766.19
+\end{verbatim}
+
+\hypertarget{are-there-differences-in-activity-patterns-between-weekdays-and-weekends}{%
+\subsection{Are there differences in activity patterns between weekdays
+and
+weekends?}\label{are-there-differences-in-activity-patterns-between-weekdays-and-weekends}}
+
+\hypertarget{panel-plot-comparing-the-average-number-of-steps-taken-per-5-minute-intervals-for-weekdays-and-weekends}{%
+\subsection{Panel plot comparing the average number of steps taken per
+5-minute intervals for Weekdays and
+Weekends}\label{panel-plot-comparing-the-average-number-of-steps-taken-per-5-minute-intervals-for-weekdays-and-weekends}}
+
+Coverting `interval' column data to a vailid date-time format.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity}\SpecialCharTok{$}\NormalTok{date }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{(}\FunctionTok{strptime}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{date, }\AttributeTok{format=}\StringTok{"\%Y{-}\%m{-}\%d"}\NormalTok{))}
+
+\NormalTok{activity}\SpecialCharTok{$}\NormalTok{dayType }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(activity}\SpecialCharTok{$}\NormalTok{date, }\ControlFlowTok{function}\NormalTok{(x) \{}
+  \ControlFlowTok{if}\NormalTok{(}\FunctionTok{weekdays}\NormalTok{(x) }\SpecialCharTok{==} \StringTok{"شنبه"} \SpecialCharTok{|} \FunctionTok{weekdays}\NormalTok{(x) }\SpecialCharTok{==} \StringTok{"یکشنبه"}\NormalTok{)}
+\NormalTok{  \{AA }\OtherTok{\textless{}{-}} \StringTok{"Weekend"}\NormalTok{\}}
+  \ControlFlowTok{else}\NormalTok{ \{AA }\OtherTok{\textless{}{-}} \StringTok{"Weekday"}\NormalTok{\}}
+\NormalTok{  AA}
+\NormalTok{\})}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{creating-the-data-set-that-will-be-plotted-and-plotting-using-ggplot2}{%
+\subsection{Creating the data set that will be plotted and Plotting
+using
+ggplot2}\label{creating-the-data-set-that-will-be-plotted-and-plotting-using-ggplot2}}
+
+Now that we have the valid date time format we can have a cleaner
+looking Time-Seriesplot, for comparison of the average 24-hour period on
+weekdays and weekends.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity\_inDay }\OtherTok{\textless{}{-}}  \FunctionTok{aggregate}\NormalTok{(steps }\SpecialCharTok{\textasciitilde{}}\NormalTok{ interval }\SpecialCharTok{+}\NormalTok{ dayType, activity, mean, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+
+
+\NormalTok{plot3 }\OtherTok{\textless{}{-}}  \FunctionTok{ggplot}\NormalTok{(activity\_inDay, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ interval , }\AttributeTok{y =}\NormalTok{ steps, }\AttributeTok{color =}\NormalTok{ dayType)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"average daily steps by say type"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"interval"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ylab}\NormalTok{(}\StringTok{"average number of Steps"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{dayType, }\AttributeTok{ncol =} \DecValTok{1}\NormalTok{, }\AttributeTok{nrow=}\DecValTok{2}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_color\_discrete}\NormalTok{(}\AttributeTok{name =} \StringTok{"day type"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_economist}\NormalTok{(}\AttributeTok{base\_family =} \StringTok{"serif"}\NormalTok{)}
+
+\FunctionTok{print}\NormalTok{(plot3) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{figures unnamed-chunk-17-1.png}
+
+\end{document}
